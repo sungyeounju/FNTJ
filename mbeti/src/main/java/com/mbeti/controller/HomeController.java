@@ -1,5 +1,7 @@
 package com.mbeti.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
@@ -11,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -73,6 +76,33 @@ public class HomeController {
 	public String notice() {
 		return "notice";
 	}
+	
+	//연주씨 01
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	public String search() {
+		return "search";
+	}
+	
+	//연주씨 02
+	@RequestMapping(value = "/search_result", method = RequestMethod.GET)
+	public String search_result() {
+		return "search_result";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/search_source", method = RequestMethod.GET)
+	public String search_source() {
+		return "search_source";
+	}
+	
+	 
+	    @RequestMapping(value = "/search_source", method = RequestMethod.GET, produces = "application/json")
+	    @ResponseBody
+	    public FileSystemResource getProvinceList(HttpServletRequest request) throws IOException {
+	        String path = request.getSession().getServletContext().getRealPath("/WEB-INF/views") + "/search_source.json";
+	        return new FileSystemResource(new File(path));
+	    }
+
 	
 ////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////        boardController         /////////////////////////////
