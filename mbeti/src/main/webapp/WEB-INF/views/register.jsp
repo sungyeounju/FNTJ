@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 	 	
 	 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 	<script src="https://github.com/Pikaday/Pikaday/blob/master/plugins/pikaday.jquery.js"></script>
 		<title>회원가입</title>
 	</head>
 	
@@ -22,7 +23,7 @@
    color: rgba(0, 0, 0, 0);
    opacity: 1;
    display: block;
-   background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png) no-repeat;
+   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9487/icon-calendar-72x72.png") no-repeat;
    width: 20px;
    height: 20px;
    border-width: thin;
@@ -31,7 +32,7 @@
 	
 	<script type="text/javascript">
 	
-/* 	var picker = new Pikaday({ 
+		/* var picker = new Pikaday({ 
 		 field: document.getElementById('userBirthday'),
 		 format: 'yyyy-MM-dd',
 		 toString(date, format) {
