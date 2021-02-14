@@ -40,7 +40,7 @@ body>.grid {
 		<div class="column">
 			<h2 class="ui teal image header">메인페이지입니다</h2>
 			<div class="ui large form">
-				<div class="ui error message">dddd</div>
+				<div class="ui error message">d  d  dd</div>
 
 			</div>
 		</div>
